@@ -610,7 +610,7 @@ export default {
           HTTP.put(
             `api/admin/member/dis-credit`,
             {
-              id: this.dataDisCredit.id,
+              phone: this.dataDisCredit.phone,
               amount: this.form.credit,
               type: this.form.type,
               note: this.form.note,
