@@ -1100,7 +1100,15 @@ export default {
         cn_id: "",
         closeNumber: "",
       },
-      optionsType: ["3 ตัวบน", "3 ตัวโต๊ด", "2 ตัวบน", "2 ตัวล่าง"],
+      optionsType: [
+        "4 ตัวบน",
+        "4 ตัวโต๊ด",
+        "3 ตัวบน",
+        "3 ตัวโต๊ด",
+        "3 ตัวล่าง",
+        "2 ตัวบน",
+        "2 ตัวล่าง",
+      ],
       optionsTypeHuay: [],
       required,
       integer,
@@ -1260,10 +1268,19 @@ export default {
       if (this.form.number != undefined) {
         const numberArray = this.form.number.split(" ");
         if (numberArray.length <= 1) {
-          if (this.form.typeNumber == "3 ตัวบน") {
+          if (this.form.typeNumber == "4 ตัวบน") {
+            const arr = numberArray[0].match(/.{1,4}/g);
+            this.closeNumber = arr;
+          } else if (this.form.typeNumber == "4 ตัวโต๊ด") {
+            const arr = numberArray[0].match(/.{1,4}/g);
+            this.closeNumber = arr;
+          } else if (this.form.typeNumber == "3 ตัวบน") {
             const arr = numberArray[0].match(/.{1,3}/g);
             this.closeNumber = arr;
           } else if (this.form.typeNumber == "3 ตัวโต๊ด") {
+            const arr = numberArray[0].match(/.{1,3}/g);
+            this.closeNumber = arr;
+          } else if (this.form.typeNumber == "3 ตัวล่าง") {
             const arr = numberArray[0].match(/.{1,3}/g);
             this.closeNumber = arr;
           } else if (this.form.typeNumber == "2 ตัวบน") {
@@ -1273,9 +1290,14 @@ export default {
             const arr = numberArray[0].match(/.{1,2}/g);
             this.closeNumber = arr;
           }
+          //  else if (this.form.typeNumber == "3 ตัวหลัง") {
+          //   const arr = numberArray[0].match(/.{1,3}/g);
+          //   this.closeNumber = arr;
+          // }
         } else {
           this.closeNumber = numberArray;
         }
+        console.log(this.closeNumber, "this.closeNumber");
       }
 
       this.$refs.addCredit.validate().then((success) => {
