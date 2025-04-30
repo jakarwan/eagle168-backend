@@ -28,6 +28,10 @@ const menu = [
         title: "สรุปการเล่น",
         route: "lotto-play",
       },
+      {
+        title: "สรุปยอดหวย",
+        route: "report-lotto",
+      },
     ],
   },
   // {
@@ -76,10 +80,18 @@ const menu = [
     children: [
       {
         title: "รายการเครดิตเข้า-ออก",
+        route: "report-credit",
+      },
+      {
+        title: "รายการถูกรางวัล",
+        route: "report-prize",
+      },
+      {
+        title: "รายการเพิ่มเครดิต",
         route: "deposite",
       },
       {
-        title: "รายการถอนเครดิต",
+        title: "รายการหักเครดิต",
         route: "report-withdraw",
       },
     ],
