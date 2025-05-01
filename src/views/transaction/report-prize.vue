@@ -1,5 +1,5 @@
 <template>
-  <b-card title="รายการเครดิตเข้า-ออก">
+  <b-card title="รายการถูกรางวัล">
     <div class="custom-search">
       <!-- advance search input -->
       <b-row class="align-items-end">
