@@ -217,6 +217,30 @@ const router = new VueRouter({
       },
     },
     {
+      path: "/promotion-discount",
+      name: "promotion-discount",
+      component: () => import("@/views/promotion/promotion-discount.vue"),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/add-promotion-discount",
+      name: "add-promotion",
+      component: () => import("@/views/promotion/add-promotion.vue"),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/edit-promotion-discount",
+      name: "edit-promotion",
+      component: () => import("@/views/promotion/edit-promotion.vue"),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
       path: "/checkout/:codeStore/:billCode",
       name: "checkout",
       component: () => import("@/views/checkout/ECommerceCheckout"),

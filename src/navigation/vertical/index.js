@@ -135,6 +135,10 @@ const menu = [
         title: "อัตราจ่าย",
         route: "pay-rate",
       },
+      // {
+      //   title: "โปรโมชั่นส่วนลด",
+      //   route: "promotion-discount",
+      // },
     ],
   },
 ];
